@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaaS Blueprint & Validator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- React Flow Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow@11.10.1/dist/style.css" />
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #000000; 
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #262626; 
+        border-radius: 3px;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #404040; 
+      }
+      
+      /* Light mode scrollbar */
+      ::-webkit-scrollbar-track {
+        background: #f5f5f5; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4d4d4; 
+        border-radius: 3px;
+      }
+
+      /* Animation Utilities */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideInBottom {
+        from { opacity: 0; transform: translateY(1rem); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes zoomIn {
+        from { opacity: 0; transform: scale(0.98); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      
+      .animate-in {
+        animation-duration: 0.4s;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .fade-in {
+        animation-name: fadeIn;
+      }
+      .slide-in-from-bottom-4 {
+        animation-name: slideInBottom;
+      }
+      .zoom-in {
+        animation-name: zoomIn;
+      }
+
+      /* Utility for hiding scrollbar but keeping functionality */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "reactflow": "https://aistudiocdn.com/reactflow@^11.11.4",
+    "@hello-pangea/dnd": "https://aistudiocdn.com/@hello-pangea/dnd@^18.0.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.7",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body class="antialiased font-sans bg-white text-neutral-900 dark:bg-black dark:text-white transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
